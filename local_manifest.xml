@@ -3,8 +3,6 @@
 	
 	<!-- Remotes -->
 	<remote name="yennutheriyale" fetch="https://github.com/yennutheriyale" />
-	<remote name="Realme-G70-Series" fetch="https://github.com/Realme-G70-Series" />
-        <remote name="techyminati" fetch="https://github.com/techyminati" />
 	
         <!-- Trees -->
 	<project path="device/realme/RMX1821" name="device_realme_RMX1821" revision="twelve" remote="yennutheriyale" />
@@ -13,8 +11,6 @@
 	
 	<!-- Addons -->
         <project path="vendor/mediatek-ims" name="vendor_mediatek-ims" revision="twelve" remote="yennutheriyale" />
-	<project path="packages/apps/RealmeParts" name="android_packages_apps_RealmeParts" revision="aosp12" remote="Realme-G70-Series" />
-	<project path="packages/apps/RealmeDirac" name="android_packages_apps_RealmeParts" revision="lineage-19.1" remote="techyminati" />
 	
 	<!--Patches-->
 	<remove-project name="build" />
