@@ -12,7 +12,7 @@
 	
 	<!-- Addons -->
         <project path="vendor/mediatek-ims" name="vendor_mediatek-ims" revision="twelve" remote="yennutheriyale" />
-	<project path="packages/apps/RealmeParts" name="android_packages_apps_RealmeParts" revision="12" remote="yennutheriyale" />
+	<project path="packages/apps/RealmeParts" name="android_packages_apps_RealmeParts" revision="lineage-19.1" remote="techyminati" />
 	<project path="packages/apps/RealmeDirac" name="android_packages_apps_RealmeParts" revision="lineage-19.1" remote="techyminati" />
 	
 	<!--Patches-->
