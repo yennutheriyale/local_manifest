@@ -1,40 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-
-        <remote name="yennutheriyale"
-                fetch="https://github.com/yennutheriyale" />
-	      <remote name="sarthakroy2002"
-                fetch="https://github.com/sarthakroy2002" />
-	      <remote name="techyminati"
-                fetch="https://github.com/techyminati" />
-
-	<!-- Device Sauce -->
-        <project path="device/realme/RMX1821" name="device_realme_RMX1821" remote="yennutheriyale" revision="twelve" clone-depth="1" />
-        <project path="vendor/realme/RMX1821" name="vendor_realme_RMX1821" remote="yennutheriyale" revision="twelve" clone-depth="1" />
-	<project path="kernel/realme/RMX1821" name="kernel_realme_RMX1821" remote="yennutheriyale" revision="Q" clone-depth="1" />
-  
-   <!-- Clang -->
-        <project path="prebuilts/clang/host/linux-x86/clang-r437112" name="android_prebuilts_clang_host_linux-x86_clang-r437112" remote="sarthakroy2002" revision="master" clone-depth="1" />
 	
-   <!-- Parts -->
-	<project path="packages/apps/RealmeParts" name="android_packages_apps_RealmeParts" remote="yennutheriyale" revision="12" clone-depth="1" />
-     
-   <!-- Dirac -->
-        <project path="packages/apps/RealmeDirac" name="android_packages_apps_RealmeDirac" remote="techyminati" revision="lineage-19.1" clone-depth="1" />
-
-   <!-- IMS -->
-	 <project path="vendor/mediatek/ims" name="vendor-mediatek-ims" remote="yennutheriyale" revision="twelve" clone-depth="1" />
+	<!-- Remotes -->
+	<remote name="yennutheriyale" fetch="https://github.com/yennutheriyale" />
+        <remote name="techyminati" fetch="https://github.com/techyminati" />
 	
-	<!-- Patch -->
+        <!-- Trees -->
+	<project path="device/realme/RMX1821" name="device_realme_RMX1821" revision="twelve" remote="yennutheriyale" />
+	<project path="vendor/realme/RMX1821" name="vendor_realme_RMX1821" revision="twelve" remote="yennutheriyale" />
+	<project path="kernel/realme/RMX1821" name="kernel_realme_RMX1821" revision="Q" remote="yennutheriyale" />
+	
+	<!-- Addons -->
+        <project path="vendor/mediatek-ims" name="vendor_mediatek-ims" revision="twelve" remote="yennutheriyale" />
+	<project path="packages/apps/RealmeParts" name="android_packages_apps_RealmeParts" revision="12" remote="yennutheriyale" />
+	<project path="packages/apps/RealmeDirac" name="android_packages_apps_RealmeParts" revision="lineage-19.1" remote="techyminati" />
+	
+	<!--Patches-->
 	<remove-project name="build" />
-         <project path="build/make" name="build" groups="pdk" > remote="yennutheriyale" revision="twelve" >
-         <copyfile src="core/root.mk" dest="Makefile" />
-         <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
-         <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
-         <linkfile src="core" dest="build/core" />
-         <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
-         <linkfile src="target" dest="build/target" />
-         <linkfile src="tools" dest="build/tools" />
-  </project>
+	<project path="build/make" name="build" groups="pdk" remote="yennutheriyale" revision="twelve" />
+        <copyfile src="core/root.mk" dest="Makefile" />
+        <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+        <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+        <linkfile src="core" dest="build/core" />
+        <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+        <linkfile src="target" dest="build/target" />
+        <linkfile src="tools" dest="build/tools" />
+        </project>
 
 </manifest>
