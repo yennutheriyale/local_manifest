@@ -11,10 +11,11 @@
 	
 	<!-- Addons -->
         <project path="vendor/mediatek-ims" name="vendor_mediatek-ims" revision="twelve" remote="yennutheriyale" />
+	<project path="packages/apps/RealmeParts" name="android_packages_apps_RealmeParts" revision="aosp12" remote="yennutheriyale" />
 	
 	<!--Patches-->
-	<remove-project name="build" />
-	<project path="build/make" name="build" groups="pdk" remote="yennutheriyale" revision="twelve" >
+	<remove-project name="platform/build" />
+	<project path="build/make" name="platform_build" groups="pdk" remote="yennutheriyale" revision="wip" >
           <copyfile src="core/root.mk" dest="Makefile" />
           <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
           <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
